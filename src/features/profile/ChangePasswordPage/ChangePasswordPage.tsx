@@ -12,7 +12,7 @@ export function ChangePasswordPage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const { show } = useToast();
-  const { user } = useAuthStore();
+  useAuthStore();
   
   const [currentPin, setCurrentPin] = useState('');
   const [newPin, setNewPin] = useState('');

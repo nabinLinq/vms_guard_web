@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { X } from 'lucide-react';
 import styles from './IncidentForm.module.css';
 
@@ -10,7 +9,6 @@ interface IncidentFormProps {
 }
 
 export function IncidentForm({ isOpen, onClose, onSubmit }: IncidentFormProps) {
-  const { t } = useTranslation();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [priority, setPriority] = useState('MEDIUM');

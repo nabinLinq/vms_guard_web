@@ -1,4 +1,5 @@
-import { apiClient } from './client';
+// Phase 1: Mock visits API – real API calls are commented out below
+// import { apiClient } from './client';
 import type { MockVisit } from '../data/models';
 import { mockInsideVisits, mockWaitingVisits, mockFrequentVisitors } from '../data/mockData';
 
@@ -17,7 +18,7 @@ export async function getFrequentVisitors(): Promise<MockVisit[]> {
   return mockFrequentVisitors;
 }
 
-export async function checkoutVisit(visitId: string): Promise<void> {
+export async function checkoutVisit(_visitId: string): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, 800));
 }
 
@@ -29,6 +30,6 @@ export async function validateScanCode(code: string): Promise<{ success: boolean
   });
 }
 
-export async function submitWalkin(data: any): Promise<void> {
+export async function submitWalkin(_data: any): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, 1000));
 }

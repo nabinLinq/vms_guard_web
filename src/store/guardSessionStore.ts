@@ -14,7 +14,7 @@ interface GuardSessionState {
 
 export const useGuardSessionStore = create<GuardSessionState>()(
   persist(
-    (set, get) => ({
+    (set, _get) => ({
       isCheckedIn: false,
       checkInTime: null,
       checkInLat: null,

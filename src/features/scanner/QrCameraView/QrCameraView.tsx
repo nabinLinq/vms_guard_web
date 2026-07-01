@@ -67,13 +67,16 @@ export function QrCameraView({ onScan, isActive, flashOn = false }: QrCameraView
 
   // Effect to toggle flash
   useEffect(() => {
-    if (scannerRef.current && scannerRef.current.hasFlash()) {
+    if (!scannerRef.current) return;
+    const scanner = scannerRef.current;
+    (scanner.hasFlash() as unknown as Promise<boolean>).then((has) => {
+      if (!has) return;
       if (flashOn) {
-        scannerRef.current.turnFlashOn().catch(console.warn);
+        scanner.turnFlashOn().catch(console.warn);
       } else {
-        scannerRef.current.turnFlashOff().catch(console.warn);
+        scanner.turnFlashOff().catch(console.warn);
       }
-    }
+    }).catch(console.warn);
   }, [flashOn]);
 
   if (hasCamera === false || error) {

@@ -1,6 +1,6 @@
 import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, User, LogOut, Shield, ChevronRight } from 'lucide-react';
+import { ArrowLeft, LogOut, Shield, ChevronRight } from 'lucide-react';
 import { useAuthStore } from '../../../store/authStore';
 import { useGuardSessionStore } from '../../../store/guardSessionStore';
 import { Modal } from '../../../components/Modal/Modal';

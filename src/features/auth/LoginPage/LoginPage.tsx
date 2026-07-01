@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Eye, EyeOff, Lock, Phone } from 'lucide-react';
-import { useAuthStore, mockLogin } from '../../../store/authStore';
+import { mockLogin } from '../../../store/authStore';
 import { Spinner } from '../../../components/Spinner/Spinner';
 import styles from './LoginPage.module.css';
 

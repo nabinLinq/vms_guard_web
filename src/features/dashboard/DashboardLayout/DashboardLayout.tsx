@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Bell, QrCode, Plus, CloudOff, Globe } from 'lucide-react';
+import { Bell, QrCode, CloudOff, Globe } from 'lucide-react';
 import { useAuthStore } from '../../../store/authStore';
 import { useGuardSessionStore } from '../../../store/guardSessionStore';
 import { useOfflineQueueStore } from '../../../store/offlineQueueStore';
@@ -49,7 +49,7 @@ export function DashboardLayout() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const user = useAuthStore((state) => state.user);
-  const { isCheckedIn, checkInTime } = useGuardSessionStore();
+  const { checkInTime } = useGuardSessionStore();
   const queue = useOfflineQueueStore((state) => state.queue);
   
   const [activeTab, setActiveTab] = useState<TabKey>('HOME');

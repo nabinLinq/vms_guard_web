@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { QrCameraView } from '../QrCameraView/QrCameraView';
 import { EnterCodeKeypad } from '../EnterCodeKeypad/EnterCodeKeypad';
@@ -11,7 +10,6 @@ type Mode = 'SCAN' | 'CODE';
 
 export function ScannerTab() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const { show } = useToast();
   
   const [mode, setMode] = useState<Mode>('SCAN');
