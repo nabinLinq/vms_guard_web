@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: var(--space-xl);
+  overflow-y: auto;
+  padding-bottom: 80px; /* Space for FAB */
+}
+
+.displayArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg) 0;
+}
+
+.codeDisplay {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--color-text-primary);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--color-divider);
+  width: 80%;
+  text-align: center;
+}
+
+.placeholder {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  color: var(--color-text-muted);
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0 var(--space-md);
+}
+
+.key, .keyAction {
+  background-color: var(--color-keypad-btn);
+  border: 1px solid var(--color-keypad-border);
+  color: var(--color-text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 95px;
+  height: 95px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.1s, transform 0.1s;
+}
+
+.keyAction {
+  background-color: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+}
+
+.key:active, .keyAction:active {
+  background-color: var(--color-bg-elevated);
+  transform: scale(0.95);
+}
+
+.key:disabled, .keyAction:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitKey {
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 1.25rem;
+  border: none;
+}
+
+.submitKey:not(:disabled):active {
+  background-color: var(--color-primary-dark);
+}

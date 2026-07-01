@@ -1,0 +1,118 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-deep);
+}
+
+.appBar {
+  display: flex;
+  align-items: center;
+  padding: 16px var(--space-lg);
+  background-color: var(--color-bg-deep);
+  gap: 16px;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.content {
+  flex: 1;
+  padding: var(--space-md);
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.centerLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.card {
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-divider);
+  overflow: hidden;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cardHeader:hover {
+  background-color: var(--color-bg-elevated);
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.importantBadge {
+  background-color: var(--color-status-out);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-bottom: 2px;
+}
+
+.noticeTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.cardBody {
+  padding: 0 var(--space-md) var(--space-md);
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-top: 1px dashed var(--color-divider);
+  padding-top: var(--space-sm);
+  margin-top: var(--space-sm);
+}

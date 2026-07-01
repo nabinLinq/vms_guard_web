@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.subTabBar {
+  display: flex;
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  margin-bottom: var(--space-md);
+  border: 1px solid var(--color-divider);
+}
+
+.subTab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 8px 0;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.subTab.active {
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.countBadge {
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  border-radius: 10px;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+}
+
+.active .countBadge {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.listContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 80px; /* space for FAB */
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.centerLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 200px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}

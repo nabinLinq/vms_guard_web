@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 250px;
+  justify-content: center;
+}
+
+.stateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.spinner {
+  animation: spin 1.5s linear infinite;
+  margin-bottom: var(--space-lg);
+}
+
+.stateText {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+.iconCircleError {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--color-status-out) 15%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.iconCircleSuccess {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--color-status-inside) 15%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.errorText {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: var(--space-xl);
+}
+
+.successText {
+  color: var(--color-status-inside);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+}
+
+.retryBtn {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-divider);
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.retryBtn:hover {
+  background-color: var(--color-bg-elevated);
+}
+
+.infoCard {
+  width: 100%;
+  background-color: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.infoLabel {
+  color: var(--color-text-secondary);
+}
+
+.infoValue {
+  color: var(--color-text-primary);
+  font-weight: 500;
+  text-align: right;
+}
+
+.checkInBtn {
+  width: 100%;
+  background-color: var(--color-status-inside);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.checkInBtn:active {
+  transform: scale(0.98);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

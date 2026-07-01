@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  margin-top: 0;
+}
+
+.listContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 80px; /* space for FAB */
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.centerLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 200px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}

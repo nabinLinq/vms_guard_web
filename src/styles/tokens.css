@@ -1,0 +1,43 @@
+/* tokens.css — mirrors Flutter AppColors exactly */
+:root {
+  /* Brand */
+  --color-primary:        #E53935;
+  --color-primary-dark:   #B71C1C;
+
+  /* Backgrounds */
+  --color-bg-deep:        #0D1117;
+  --color-bg-surface:     #161B22;
+  --color-bg-elevated:    #1F2937;
+
+  /* Text */
+  --color-text-primary:   #F0F6FC;
+  --color-text-secondary: #8B949E;
+  --color-text-muted:     #484F58;
+
+  /* Status */
+  --color-status-inside:  #238636;
+  --color-status-waiting: #E3B341;
+  --color-status-out:     #E53935;
+
+  /* Divider / Keypad */
+  --color-divider:        #21262D;
+  --color-keypad-btn:     #1F2937;
+  --color-keypad-border:  #30363D;
+
+  /* Spacing */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, sans-serif;
+}

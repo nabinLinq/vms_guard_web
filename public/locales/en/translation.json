@@ -1,0 +1,38 @@
+{
+  "auth": {
+    "login": "Sign In",
+    "phone": "Phone Number",
+    "password": "Password",
+    "forgot": "Forgot Password?",
+    "guardAccess": "Guard access only • Unauthorized use prohibited",
+    "sendOtp": "Send OTP",
+    "verifyOtp": "Verify OTP"
+  },
+  "dashboard": {
+    "hi": "Hi, {{name}}",
+    "scanTab": "Scan Code",
+    "freqTab": "Freq. Visitor",
+    "visitorTab": "Visitor"
+  },
+  "scanner": {
+    "scan": "Scan",
+    "enterCode": "Enter Code",
+    "scanToEnter": "Scan QR to Enter"
+  },
+  "profile": {
+    "title": "Guard Profile",
+    "personal": "PERSONAL DETAILS",
+    "assignment": "ASSIGNMENT DETAILS",
+    "account": "ACCOUNT SETTINGS",
+    "badge": "Badge Number",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "type": "Guard Type",
+    "shift": "Current Shift",
+    "location": "Assigned Location",
+    "language": "Language",
+    "checkout": "Check Out Shift",
+    "logout": "Logout",
+    "changePassword": "Change Password"
+  }
+}
