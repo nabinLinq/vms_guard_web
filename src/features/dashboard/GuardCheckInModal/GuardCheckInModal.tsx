@@ -20,7 +20,7 @@ function getDistanceFromLatLonInM(lat1: number, lon1: number, lat2: number, lon2
   return d;
 }
 
-type Step = 'IDLE' | 'LOCATING' | 'READY' | 'ERROR';
+type Step = 'IDLE' | 'LOCATING' | 'READY' | 'WARNING' | 'ERROR';
 
 export function GuardCheckInModal() {
   const user = useAuthStore((state) => state.user);
@@ -69,8 +69,8 @@ export function GuardCheckInModal() {
           if (dist <= maxRadius) {
             setStep('READY');
           } else {
-            setStep('ERROR');
-            setErrorMsg(`You are ${Math.round(dist)}m away from your post. Check-in is restricted to ${maxRadius}m.`);
+            setStep('WARNING');
+            setErrorMsg(`You are ${Math.round(dist)}m away from your post (Outside ${maxRadius}m range).`);
           }
         } else {
           // If no workplace location configured, allow check-in anyway
@@ -149,6 +149,33 @@ export function GuardCheckInModal() {
             <button className={styles.checkInBtn} onClick={handleCheckIn}>
               <CheckCircle2 size={20} />
               Check In Now
+            </button>
+          </div>
+        )}
+
+        {step === 'WARNING' && (
+          <div className={styles.stateContainer}>
+            <div className={styles.iconCircleWarning}>
+              <MapPin size={32} color="var(--color-status-out)" />
+            </div>
+            <p className={styles.warningText}>
+              {errorMsg}
+            </p>
+
+            <div className={styles.infoCard}>
+              <div className={styles.infoRow}>
+                <span className={styles.infoLabel}>Location:</span>
+                <span className={styles.infoValue}>{user.locationName}</span>
+              </div>
+              <div className={styles.infoRow}>
+                <span className={styles.infoLabel}>Shift:</span>
+                <span className={styles.infoValue}>{user.shiftName}</span>
+              </div>
+            </div>
+
+            <button className={styles.checkInBtnWarning} onClick={handleCheckIn}>
+              <CheckCircle2 size={20} />
+              Check In Anyway
             </button>
           </div>
         )}

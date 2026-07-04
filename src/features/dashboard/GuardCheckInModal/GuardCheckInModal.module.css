@@ -128,3 +128,42 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.iconCircleWarning {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--color-status-out) 15%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.warningText {
+  color: var(--color-status-out);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+}
+
+.checkInBtnWarning {
+  width: 100%;
+  background-color: var(--color-status-out);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.checkInBtnWarning:active {
+  transform: scale(0.98);
+}
